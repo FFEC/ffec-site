@@ -1,0 +1,661 @@
+:root {
+  --color-primary: #111;
+  --color-secondary: #fff;
+  --color-accent: #ffe800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* FONTS */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  background-color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.9rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-secondary);
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  margin: 8px 0;
+  transition: transform 0.4s;
+}
+
+.collapsible--open .bar1 {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.collapsible--open .bar2 {
+  opacity: 0;
+}
+
+.collapsible--open .bar3 {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Nav Bar */
+.nav-bar {
+  background-color: black;
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  padding: 2rem;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-item {
+  display: none;
+}
+
+.nav-item--give {
+  cursor: pointer;
+}
+
+.nav-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+.collapsible--open .nav-title {
+  display: none;
+}
+
+.collapsible--open {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 6rem;
+}
+
+.collapsible--open .nav-title {
+  opacity: 0;
+}
+
+.collapsible--open .nav-item {
+  display: flex;
+  padding: 1rem;
+  list-style: none;
+  transition: color 0.4s;
+  overflow: visible;
+}
+
+.collapsible--open .nav-item:hover a {
+  border-bottom: 0.5rem solid var(--color-accent);
+}
+
+@media screen and (min-width: 600px) {
+  .collapsible--open {
+    height: 6rem;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .collapsible--open .nav-title {
+    opacity: 1;
+  }
+
+  .nav-title {
+    visibility: visible;
+  }
+
+  .nav-bar {
+    justify-content: space-between;
+  }
+
+  .nav-items {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    height: 6rem;
+  }
+
+  .nav-item {
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .nav-item--give {
+    border-top: 5px solid var(--color-accent);
+    position: relative;
+    transition: ease-out 0.4s;
+    /* overflow: hidden; */
+  }
+
+  .nav-item--give:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent);
+    position: absolute;
+    transition: top 0.3s ease;
+    top: -6rem;
+    left: 0;
+  }
+
+  .nav-item--give a {
+    z-index: 1;
+  }
+
+  .nav-item--give:hover:before {
+    top: 0;
+  }
+
+  .nav-item--give:hover a {
+    color: var(--color-primary);
+  }
+}
+
+/* Hero Shot */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/images/boy-smiling-smaller.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+#give-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/images/donations.jpg");
+}
+
+#contact-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/images/contact.jpg");
+}
+
+.hero-title {
+  margin: 6%;
+  max-width: 600px;
+  line-height: 4rem;
+  color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../assets/images/boy-smiling.jpg");
+  }
+}
+
+/* Give Section */
+.give {
+  color: white;
+  padding: 6rem 4rem;
+}
+
+.give-title {
+  padding-bottom: 1.5rem;
+}
+
+/* Our Work Section */
+.our-work-section,
+.accepted-donations {
+  color: white;
+}
+
+.our-work {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+}
+
+.our-work div {
+  padding: 0 2rem;
+}
+
+.our-work h2 {
+  margin: 1.5rem 0;
+}
+
+.our-work p {
+  margin: 1.5rem 0;
+}
+
+.highlight {
+  color: var(--color-accent);
+  font-style: bold;
+}
+
+.line {
+  margin-bottom: 1.5rem;
+  height: 1px;
+  width: 64px;
+  display: block;
+  border-bottom: 2px solid var(--color-accent);
+  padding-top: 2.2rem;
+}
+
+.highlight--2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  .our-work {
+    flex-direction: row;
+  }
+
+  .our-work--header {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Cards */
+.cards {
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cards .container {
+  display: grid;
+  padding: 4rem;
+}
+
+.card {
+  margin: 4rem auto;
+  max-width: 700px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-photo {
+  width: 100%;
+  max-height: 25rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card-text {
+  padding: 3rem 2.4rem 2rem 2.4rem;
+}
+
+.card-text--heading {
+  padding-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 700px) {
+  .cards .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .card {
+    margin: 0;
+  }
+}
+
+/* Button */
+.btn {
+  border: 2px solid var(--color-accent);
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  padding: 1.4rem 6rem;
+  margin-top: 2rem;
+  width: 40%;
+  transition: 0.3s;
+}
+
+.btn a {
+  color: var(--color-accent);
+  transition: 0.3s;
+}
+
+.btn:hover a {
+  color: var(--color-primary);
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  cursor: pointer;
+}
+
+/* FOOTER */
+/* footer {
+  padding: 0 4rem;
+} */
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+
+.links {
+  font-size: 1.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.link {
+  padding: 1rem 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  padding-top: 2rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+}
+
+.social-icon {
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .links {
+    flex-direction: row;
+  }
+
+  .social {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .copyright {
+    text-align: right;
+  }
+}
+
+/* GIVE PAGE */
+.give-page {
+  color: white;
+  padding: 2rem 4rem;
+}
+
+.make-difference {
+  padding-top: 6rem;
+}
+
+.donation-img {
+  width: 100%;
+  padding: 3rem 0rem;
+}
+
+.donations {
+  padding: 2rem 0;
+}
+
+.donation-list {
+  font-size: 1.9rem;
+  padding: 2rem 5rem;
+}
+
+.donations a {
+  font-family: "PT Serif", serif;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.donations a:hover {
+  color: var(--color-accent);
+}
+
+@media screen and (min-width: 1000px) {
+  .accepted-donations {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .donation-img {
+    flex-basis: 1;
+    flex-shrink: 0;
+  }
+
+  .donations {
+    flex-basis: 50%;
+    flex-shrink: 0;
+  }
+}
+
+/* CONTACT PAGE */
+.contact-us {
+  color: white;
+  padding: 6rem 4rem;
+}
+
+.contact p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* LEGAL PAGE */
+.legal {
+  color: white;
+  padding: 12rem 4rem 6rem 4rem;
+}
+
+.legal a {
+  font-family: "PT Serif", serif;
+  text-decoration: underline;
+}
+
+/* DONATION FORM */
+.donation-form-section h3 {
+  padding: 2rem 0;
+}
+
+.donation_form input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.donation_form label {
+  display: inline-block;
+  font-size: 1.6rem;
+  border: 1px solid var(--color-accent);
+  font-family: "Poppins", sans-serif;
+  padding: 1.4rem 4rem;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.donation_form input[type="radio"]:checked + label {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border: 1px solid var(--color-accent);
+}
+
+.other-donation-amount {
+  display: none;
+}
+
+.other-donation-amount-open {
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-accent);
+  color: black;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 0 4em;
+}
+
+input[type="number"] {
+  width: 60px;
+  border: none;
+  background-color: var(--color-accent);
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  padding: 1.4rem 0;
+}
+
+.other-donation-amount-open p {
+  font-size: 1.2rem;
+}
+
+/* remove arrows on number input box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="button"] {
+  width: 100%;
+}
+
+.donation-image {
+  grid-area: image;
+}
+
+.donation-form-section {
+  grid-area: donations;
+  padding-right: 40px;
+}
+
+.give-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "donations image";
+  align-items: center;
+}
+
+.donation-image img {
+  width: 100%;
+}
+
+.donation_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". other other";
+  gap: 20px;
+}
+
+.donation-amount label,
+.other-donation-amount-open {
+  width: 100%;
+  text-align: center;
+}
+
+.other-amount-div,
+.other-donation-amount {
+  grid-area: other;
+}
+
+.donate-button {
+  width: 100%;
+}
+
+@media screen and (max-width: 924px) {
+  .donation-image {
+    display: none;
+  }
+
+  .give-section {
+    grid-template-columns: 1fr;
+  }
+}

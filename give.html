@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Faith Family Empowerment Center</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <a href="index.html" class="nav-title">Faith Family Empowerment Center</a>
+        <ul class="nav-items">
+          <li class="nav-item nav-item--contact"><a href="contact.html">Contact</a></li>
+          <li class="nav-item nav-item--give" onclick="location.href='give.html'"><a href="give.html">Give</a></li>
+        </ul>
+      </div>
+      <div class="hamburger-icon" onclick="toggleMenu(this)">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+    </header>
+
+    <section class="hero block" id= "give-hero">
+        <h1 class="hero-title">
+          <span class="highlight--3"
+            >Fight Poverty. Empower Individuals. Preserve Families.</span
+          >
+        </h1>
+    </section>
+
+    <section class="give-page container make-difference">
+    <div class="give-header">
+        <h2 class="give-title">Make a difference.</h2>
+        <h3>
+            You are the solution. Give today so families can have <span class="highlight">a better future.</span>
+        </h3>
+        <span class="line"></span>
+    </div>
+    
+
+    <div class="give-section">
+      <div class="donation-form-section">
+        <h3>Choose an amount to give.</h4>
+        <form class="donation_form">
+          <div class = "donation-amount">
+            <input type="radio" id="250" name="donation_amount" value="250" checked >
+            <label for="250">$250</label><br>
+          </div>
+          <div class = "donation-amount">
+            <input type="radio" id="100" name="donation_amount" value="100">
+            <label for="100">$100</label><br>     
+          </div>
+          <div class = "donation-amount">     
+            <input type="radio" id="50" name="donation_amount" value="50">
+            <label for="50">$50</label><br>
+          </div>
+          <div class = "donation-amount">
+            <input type="radio" id="25" name="donation_amount" value="25">
+            <label for="25">$25</label><br>
+          </div>
+          <div class = "donation-amount other-amount-div">
+            <input class="other-amount-input" type="radio" id="other_amount" name="donation_amount" value="other-amount" placeholder="Other">
+            <label for="other_amount">Other Amount</label>
+          </div>
+          <div class="donation-amount other-donation-amount">
+            $
+            <input type = "number" id="other_donation_amount" min="0" name="other_donation_amount">
+            <p>USD</p>
+          </div>
+        </form>
+        <button class="btn donate-button" onclick="window.open('https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=20&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD','_blank')">
+          <a class="donate-button-link" target="_blank" href="https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=20&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD">Donate</a>
+        </button>
+    </div>
+  <div class="donation-image">
+    <img src="assets/images/mother-and-sons-cooking.jpg" alt="">
+  </div>
+</div>
+
+    </section>
+   
+
+    <section class="give-page container accepted-donations">
+        <div class="column">
+        <div class="give-header">
+          <h2 class="give-title">Accepted Donations</h2>
+          <h3>
+            We provide individuals with essential items so they don’t have to worry. 
+          </h3>
+          <div class = "donations">
+          <p>If you’d prefer to make a physical donation, we are always looking for: </p>
+          <ul class="donation-list">
+            <li>NEW Clothes, Socks, and Underwear of all sizes for men, women, children, and infants</li>
+            <li>Women and Men's Hygiene Products</li>
+            <li>Diapers</li>
+            <li>Baby Wipes</li>
+            <li>Baby Formula</li>
+          </ul>
+          <p>Donation drop off is by appointment only. <a href="">Contact us</a> to set up a time to provide these valuable resources to our community! </p>
+        </div>
+        </div>
+    </div>
+    <div class="column"><img src="assets/images/diapers.jpg" alt="" class = "donation-img"></div>
+      </section>
+      <section class="give-page container">
+        <div class="give-header">
+          <h2 class="give-title">Volunteer</h2>
+
+          <h3>
+            Want to get involved in changing families’ lives? We are always looking for volunteers who are enthusiastic about our mission.
+          </h3>
+          <div class = "donations">
+          <p> To work with us, you must complete a criminal and CPS background check, a two hour online training, and have a recent negative TB test.
+              To learn more about how you can get involved, <a href="contact.html">contact us.</a></p>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+      <section class="container">
+        <span class="line"></span>
+      <div class="links">
+        <div class="column">
+          <a href="index.html" class="link">Home</a>
+          <a href="give.html" class="link">Give</a>
+          <a href="contact.html" class="link">Contact Us</a>
+          <a href="legal.html" class="link">Legal</a>
+        </div>
+        <div class="social column">
+          <a target="_blank" href="https://www.facebook.com/FFEC17"><img src="./root/assets/images/facebook-icon.png" alt="" class="social-icon"></a>
+          <a target="_blank" href="https://www.instagram.com/ffec17/?hl=en"><img src="./root/assets/images/instagram-icon.png" alt="" class ="social-icon"></a>
+        </div>
+      </div>
+    <p class="copyright">© 2021 | Faith Family Empowerment Center | P.O. Box 382142 Duncanville 75137</p>
+    </section>
+    </footer>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

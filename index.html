@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Faith Family Empowerment Center</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <a href="index.html" class="nav-title">Faith Family Empowerment Center</a>
+        <ul class="nav-items">
+          <li class="nav-item nav-item--contact"><a href="contact.html">Contact</a></li>
+          <li class="nav-item nav-item--give" onclick="location.href='give.html'"><a href="give.html">Give</a></li>
+        </ul>
+      </div>
+      <div class="hamburger-icon" onclick="toggleMenu(this)">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+    </header>
+    <section class="hero block">
+      <h1 class="hero-title">
+        <span class="highlight--3"
+          >Building strong foundations for self-sufficient families</span
+        >
+      </h1>
+    </section>
+    <section class="give container">
+      <div class="give-header">
+        <h2 class="give-title">Make a difference.</h2>
+        <h3>
+          Communities in the Dallas Fort Worth area face issues of poverty,
+          family violence, and illiteracy. Together, <span class="highlight">we can change that.</span>
+        </h3>
+        <span class="line"></span>
+        
+
+        <div class="give-section">
+          <div class="donation-form-section">
+            <h3>Choose an amount to give.</h4>
+            <form class="donation_form">
+              <div class = "donation-amount">
+                <input type="radio" id="250" name="donation_amount" value="250" checked >
+                <label for="250">$250</label><br>
+              </div>
+              <div class = "donation-amount">
+                <input type="radio" id="100" name="donation_amount" value="100">
+                <label for="100">$100</label><br>     
+              </div>
+              <div class = "donation-amount">     
+                <input type="radio" id="50" name="donation_amount" value="50">
+                <label for="50">$50</label><br>
+              </div>
+              <div class = "donation-amount">
+                <input type="radio" id="25" name="donation_amount" value="25">
+                <label for="25">$25</label><br>
+              </div>
+              <div class = "donation-amount other-amount-div">
+                <input class="other-amount-input" type="radio" id="other_amount" name="donation_amount" value="other-amount" placeholder="Other">
+                <label for="other_amount">Other Amount</label>
+              </div>
+              <div class="donation-amount other-donation-amount">
+                $
+                <input type = "number" id="other_donation_amount" min="0" name="other_donation_amount">
+                <p>USD</p>
+              </div>
+            </form>
+            <button class="btn donate-button" target="_blank" onclick="window.open('https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=20&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD','_blank')">
+              <a class="donate-button-link" target="_blank" href="https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=20&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD">Donate</a>
+            </button>
+        </div>
+      <div class="donation-image">
+        <img src="assets/images/mother-and-sons-cooking.jpg" alt="">
+      </div>
+    </div>
+
+
+
+    </section>
+    <section class="our-work-section">
+      <div class="container our-work">
+        <div class="our-work--header">
+          <h2 class="our-work--title">Our work</h2>
+          <h3>
+            We
+            <span class="highlight">empower individuals</span> with the tools
+            they need to overcome barriers.
+          </h3>
+          <span class="line"></span>
+        </div>
+        <div>
+          <p>
+            <span class="highlight--2">The result?</span> Transformed lives,
+            family preservation, and communities that foster growth, merit, and
+            unity.
+          </p>
+          <p>
+            <span class="highlight--2">Vision</span> – To inspire, encourage,
+            and educate people to build stronger communities.
+          </p>
+          <p>
+            <span class="highlight--2">Mission</span> – Helping people build a
+            strong foundation and empowering them to become self-sufficient and
+            promote economic growth.
+          </p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="container">
+          <div class="our-work--services card">
+            <div class="service">
+              <img class="card-photo" src="assets/images/father-and-son-on-laptop.jpg" />
+              <div class="card-text service--description">
+                <h2 class="card-text--heading">Parent Education</h2>
+                <p class="card-text--content">
+                  Many social problems could be fixed with proper parent education.
+                  We offer education programs that equip parents to become more
+                  effective in caring for their children.
+                </p>
+                <span class="line"></span>
+              </div>
+            </div>
+            </div>
+            <div class="our-work--services card">
+              <div class="service">
+                <img class="card-photo" src="assets/images/father-and-son.jpg" />
+                <div class="card-text service--description">
+                  <h2 class="card-text--heading">Parent/Child Exchanges Services</h2>
+                  <p class="card-text--content">
+                    Sometimes custody exchanges are messy. We step in to ensure they go smoothly. By supervising the exchange, we protect children from witnessing unhealthy conflict.
+                  </p>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="our-work--services card">
+              <div class="service">
+                <img class="card-photo" src="assets/images/father-kissing-son.jpg" />
+                <div class="card-text service--description">
+                  <h2 class="card-text--heading">Supervised Parent/Child Visitations</h2>
+                  <p class="card-text--content">
+                    Children’s relationships with their parents lays the foundation for the rest of their lives. Healthy parent-child bonds lead to better life outcomes all around. We step in to ensure a healthy family bond without compromising the child’s safety.
+                  </p>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="our-work--services card">
+              <div class="service">
+                <img class="card-photo" src="assets/images/food-bank-volunteers.jpg" />
+                <div class="card-text service--description">
+                  <h2 class="card-text--heading">Community Outreach</h2>
+                  <p class="card-text--content">
+                    Life happens, and sometimes people need a hand to get back on their feet. Whenever we can, we provide food, clothing, rent, and utility payments to those who need them.
+                  </p>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="our-work--services card">
+              <div class="service">
+                <img class="card-photo" src="assets/images/family.jpg" />
+                <div class="card-text service--description">
+                  <h2 class="card-text--heading">Behavioral Health Skills Training</h2>
+                  <p class="card-text--content">
+                    When life becomes challenging, children often don’t know how to cope. We offer skills training to primary caregivers so they understand how to help their children live better and work well with others.
+                  </p>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="our-work--services card">
+              <div class="service">
+                <img class="card-photo" src="assets/images/hospital-visit.jpg" />
+                <div class="card-text service--description">
+                  <h2 class="card-text--heading">CPS Hospital Sitting Services</h2>
+                  <p class="card-text--content">
+                    Children who become hospitalized while under the care of the DFPS often need someone to keep them company. We look out for these children to ensure their well-being (note that no nursing care is provided).
+                  </p>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="our-work--services card">
+              <div class="service">
+                <img class="card-photo" src="assets/images/skills-training.jpg" />
+                <div class="card-text service--description">
+                  <h2 class="card-text--heading">Job Preparation</h2>
+                  <p class="card-text--content">
+                    Jobs provide more than just a stable income. They also provide individuals with confidence and a sense of identity. We step in with job preparation that equips people to enter (or re-enter) the workforce.
+                  </p>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="our-work--services card">
+              <div class="service">
+                <img class="card-photo" src="assets/images/mom-throwing-daughter.jpg" />
+                <div class="card-text service--description">
+                  <h2 class="card-text--heading">Girls Mentoring</h2>
+                  <p class="card-text--content">
+                    At-risk youth often don’t have a strong role model to provide guidance. Mentoring bridges this gap. Through one-on-one relationships, we help  girls develop healthy relationships, perform well in school, and make positive choices for their future.
+                  </p>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="give container">
+      <div class="give-header">
+        <h2 class="give-title">Get Involved</h2>
+        <h3>
+          No matter who you are or what you can give, <span class="highlight">you can help</span> us empower families to become self-sufficient. 
+        </h3>
+        <button class="btn" onclick="location.href='give.html'">
+          <a href="give.html">Give</a>
+        </button>
+        <br>
+
+      </div>
+    </section>
+    <footer>
+      <section class="container">
+        <span class="line"></span>
+      <div class="links">
+        <div class="column">
+          <a href="index.html" class="link">Home</a>
+          <a href="give.html" class="link">Give</a>
+          <a href="contact.html" class="link">Contact Us</a>
+          <a href="legal.html" class="link">Legal</a>
+        </div>
+        <div class="social column">
+          <a target="_blank" href="https://www.facebook.com/FFEC17"><img src="./assets/images/facebook-icon.png" alt="" class="social-icon"></a>
+          <a target="_blank" href="https://www.instagram.com/ffec17/?hl=en"><img src="./assets/images/instagram-icon.png" alt="" class ="social-icon"></a>
+        </div>
+      </div>
+      <p class="copyright">© 2021 | Faith Family Empowerment Center | P.O. Box 382142 Duncanville 75137</p>
+    </section>
+    </footer>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
